@@ -43,7 +43,7 @@ LED:
 
 .blink(unsigned long spacing); // Toggles the led state every "spacing" ms.
 
-.blink(unsigned long timeOn, unsigned long timeOff); //Turns the LED on for "timeOn" ms and then off for "timeOff" ms.
+.blink(unsigned long timeOn, unsigned long timeOff); //Blinks the LED on for "timeOn" ms and then off for "timeOff" ms.
 
 
 
