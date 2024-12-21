@@ -45,7 +45,7 @@ LED:
 
 .blink(unsigned long timeOn, unsigned long timeOff); //Blinks the LED on for "timeOn" ms and then off for "timeOff" ms.
 
-
+.pwm(byte val); //Pulses the led to simulate an analog value between 0 and 255. Only use with pwm pins for the specific board. 
 
 
 
