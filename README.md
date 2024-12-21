@@ -21,4 +21,6 @@ Functions:
 
 .pressHoldRead(spacing); //Takes an unsigned long "spacing". Once the button has been continuously depressed for the debounce time, returns an unsigned long starting at 1, and incrementing every "spacing" ms until released. Otherwise returns 0.
 
-.multiClickRead(spacing); // Takes an unsigned long "spacing" Registers button presses as consinous depressions longer than the debounce time. Returns the current cound of how many presses have occured within "spacing" ms of each other. 
+.multiClickRead(spacing); // Takes an unsigned long "spacing" Registers button presses as consinous depressions longer than the debounce time. Returns the current cound of how many presses have occured within "spacing" ms of each other. Once more than "spacing" ms have passed from the last button press, the count resets to 0.
+
+
