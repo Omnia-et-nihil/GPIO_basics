@@ -1,49 +1,45 @@
-#include "LED.h"
+#ifndef LED_h
 
-LED::LED(){
-}
+#include "Arduino.h"
 
-void LED::begin(byte pin){
-  _pin = pin;
-  pinMode(_pin, OUTPUT);
-  digitalWrite(_pin, LOW);
-  _state = false;
-}
+#define LED_h
 
-void LED::on(){
-  digitalWrite(_pin, HIGH);
-  _state = true;
-}
+class LED{
+  public:
+    LED();
+    void begin(byte pin);
+    void on();
+    void off();
+    void toggle();
+    bool status();
+    void blink(unsigned long spacing);
+    void blink(unsigned long timeOn, unsigned long timeOff);
+    void pwm(byte val);
 
-void LED::off(){
-  digitalWrite(_pin, LOW);
-  _state = false;
-}
 
-void LED::toggle(){
-  digitalWrite(_pin, !_state);
-  _state = !_state;
-}
+    private:
+    byte _pin;
+    bool _state;
+    unsigned long _lastOn;
+    unsigned long _lastOff;
 
-bool LED::status(){
-  return _state;
-}
+
+};
 
 
 
-void LED::blink(unsigned long spacing){
-  if(_state){
-    if(millis() - _lastOn > spacing){
-      off();
-      _lastOff = millis();
-    }
-  }else{
-    if(millis() - _lastOff > spacing){
-      on();
-      _lastOn = millis();
-    }
-  }
-}
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
 
