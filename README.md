@@ -24,3 +24,44 @@ Functions:
 .multiClickRead(spacing); // Takes an unsigned long "spacing" Registers button presses as consinous depressions longer than the debounce time. Returns the current cound of how many presses have occured within "spacing" ms of each other. Once more than "spacing" ms have passed from the last button press, the count resets to 0.
 
 
+
+
+
+
+
+
+LED:
+.begin(ledPin); // initializes an led on gpio pin "ledPin", sets the pin to output, and the led state to low. 
+
+.on(); //Turns on the led.
+
+.off(); //Turns off the led.
+
+.toggle(); // Turns the led off if it is currently on and vice-versa.
+
+.status(); //returns true if the led is currently on and false if it is off.
+
+.blink(unsigned long spacing); // Toggles the led state every "spacing" ms.
+
+.blink(unsigned long timeOn, unsigned long timeOff); //Turns the LED on for "timeOn" ms and then off for "timeOff" ms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
