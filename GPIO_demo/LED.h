@@ -14,6 +14,7 @@ class LED{
     bool status();
     void blink(unsigned long spacing);
     void blink(unsigned long timeOn, unsigned long timeOff);
+    void pwm(byte val);
 
 
     private:
