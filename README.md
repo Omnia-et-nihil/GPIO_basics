@@ -49,14 +49,7 @@ LED:
 
 .breathe(unsigned long breatheRate); //Only use on pwm pins. Every "breatheRate" ms either increases or decreases the brightness by 1 in cycles between 0 and 255.
 
-.pulse(bool pulseStart, unsigned long pulseDuration); //If "pulseStart" is true, turns the led on for "pulseDuration" ms. Should be used similar to what follows:
- /* bool pulseStart = false;
-    if(condition){
-    pulseStart = true;
-    }
-    led.breathe(pulseStart, breatheRate);
-    pulseStart = false;
-    */ 
+.pulse(bool pulseStart, unsigned long pulseDuration); //If "pulseStart" is true, then changes it to false and turns the led on for "pulseDuration" ms. 
     
 
 
