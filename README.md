@@ -9,11 +9,11 @@ Declare a pullup button as follows: pullupButton buttonName(); When the button i
 Functions:
 .begin(buttonPin, debounceDelay); //initializes a button on GPIO pin "buttonPin" with debounce delay "debounceDelay" in ms
 
-.begin(buttonPin); //Initializes a button on GPIO pin "buttonPin" with a default debounce delay of 50 ms
+.begin(buttonPin); //Initializes a button on GPIO pin "buttonPin" with a default debounce delay of 50 µs
 
 .end(); //De-initializes the button by setting the pin to an output.
 
-.changeDebounceDelay(newDebounce); // Changes the debounce delay to newDebounce in ms.
+.changeDebounceDelay(newDebounce); // Changes the debounce delay to "newDebounce" µs.
 
 .releaseRead(); // Once the button has been continuously depressed for the debounce time, returns true as soon as the button is released. Otherwise returns false.
 
