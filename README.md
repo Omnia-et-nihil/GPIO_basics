@@ -49,7 +49,16 @@ LED:
 
 .breathe(unsigned long breatheRate); //Only use on pwm pins. Every "breatheRate" ms either increases or decreases the brightness by 1 in cycles between 0 and 255.
 
-.pulse(bool pulseStart, unsigned long pulseDuration); //If "pulseStart" is true, then changes it to false and turns the led on for "pulseDuration" ms. 
+.pulse(bool pulseStart, unsigned long pulseDuration); //If "pulseStart" is true, then changes it to false and turns the led on for "pulseDuration" ms. Example use:
+/* if(condition){
+      pulseStart = true;
+   }
+   led.pulse(pulseStart, pulseDuration);
+*/
+
+.pattern(bool patternStart, unsigned int ptrn[]); //Turns the led on and off in accordance with ptrn, which is an array of unsigned ints corresponding to ms 
+                                                  //durations. The led will toggle and hold state for each duration. Will turn off on encountering the terminating 
+                                                  //value, which should always be 0. "patternStart" works the same as "pulseStart" in the preceding function.
     
 
 
