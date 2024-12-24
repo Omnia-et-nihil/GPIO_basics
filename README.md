@@ -9,7 +9,7 @@ Declare a pullup button as follows: pullupButton buttonName(); When the button i
 Functions:
 .begin(buttonPin, debounceDelay); //initializes a button on GPIO pin "buttonPin" with debounce delay "debounceDelay" in ms
 
-.begin(buttonPin); //Initializes a button on GPIO pin "buttonPin" with a default debounce delay of 50 µs
+.begin(buttonPin); //Initializes a button on GPIO pin "buttonPin" with a default debounce delay of 500 µs
 
 .end(); //De-initializes the button by setting the pin to an output.
 
