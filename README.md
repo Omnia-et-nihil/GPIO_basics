@@ -39,7 +39,7 @@ LED:
 
 .toggle(); // Turns the led off if it is currently on and vice-versa.
 
-.status(); //returns true if the led is currently on and false if it is off.
+.state; //returns true if the led is currently on and false if it is off.
 
 .blink(unsigned long spacing); // Toggles the led state every "spacing" ms.
 
@@ -62,7 +62,7 @@ LED:
     
 
 
-
+Note that the use of other led functions can interfere with pulse and pattern if called before the pulse or pattern has completed. To that end, .pulseRunning and .patternRunning can be used as a check, returning true or false based on whether those functions are currently running. 
 
 
 
