@@ -3,8 +3,10 @@ Arduino library for basic GPIO devices
 
 Buttons:
 
-The buttons.h library defines a class pullupButton, and functions to read various types of presses. For the hardware, the button should bridge an arduino GPIO pin and ground. 
-Declare a pullup button as follows: pullupButton buttonName(); When the button is initialized, the appropriate pin is set to an input pullup.
+The buttons.h library defines two classes: pullupButton and pullDownButton, as well as functions to read various types of presses. For the pullup button, the button should bridge an arduino GPIO pin and ground. For the pulldown button, the pin should be connected to a large resistor going to ground, as well as to the button seperating it from a voltage source(such as the 5V pin). The resistor is not strictly necessary, but is advised to prevent blowing out the pin or producing erratic readings. 
+
+Declare a pullup button as follows: pullupButton buttonName; When the button is initialized, the appropriate pin is set to an input pullup. For the pull down button use pullDownButton buttonName;
+Both classes share the same functions. 
 
 Functions:
 .begin(buttonPin, debounceDelay); //initializes a button on GPIO pin "buttonPin" with debounce delay "debounceDelay" in ms
