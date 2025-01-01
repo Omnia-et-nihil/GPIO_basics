@@ -6,7 +6,7 @@ pullupButton multiButton;
 pullupButton holdButton;
 
 unsigned long multi;
-bool mTracker;
+bool multiTracker;
 unsigned long multiTotal;
 
 unsigned long hold;
