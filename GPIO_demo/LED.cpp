@@ -22,6 +22,11 @@ void LED::off(){
   state = false;
 }
 
+void LED::pwOff(){
+  analogWrite(_pin, 0);
+  state = false;
+}
+
 void LED::toggle(){
   digitalWrite(_pin, !state);
   state = !state;
@@ -57,10 +62,12 @@ void LED::blink(unsigned long timeOn, unsigned long timeOff){
 
 void LED::pwm(byte val){
   analogWrite(_pin, val);
+  state = true;
 }
 
 
 byte LED::breathe(unsigned long breatheRate){
+  state = true;
   static int breatheDirection;
   static byte breatheVal;
   static unsigned long breatheTime;
@@ -79,6 +86,7 @@ byte LED::breathe(unsigned long breatheRate){
       
 void LED::pulse(bool &pulseBegin, unsigned long pulseDuration){
   static unsigned long pulseStart;
+  static bool pulseRunning;
   if(pulseBegin){
     on();
     pulseStart = millis();

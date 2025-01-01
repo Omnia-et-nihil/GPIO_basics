@@ -11,6 +11,7 @@ class LED{
     bool state;
     void on();
     void off();
+    void pwOff();
     void toggle();
     void blink(unsigned long spacing);
     void blink(unsigned long timeOn, unsigned long timeOff);

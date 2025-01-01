@@ -49,6 +49,8 @@ LED:
 
 .pwm(byte val); //Pulses the led to simulate an analog value between 0 and 255. Only use with pwm pins for the specific board. 
 
+.pwOff(); //On some boards, off() will not work correctly after pwm() is called. For those cases use this instead.
+
 .breathe(unsigned long breatheRate); //Only use on pwm pins. Every "breatheRate" ms either increases or decreases the brightness by 1 in cycles between 0 and 255.
 
 .pulse(bool pulseStart, unsigned long pulseDuration); //If "pulseStart" is true, then changes it to false and turns the led on for "pulseDuration" ms. Example use:
